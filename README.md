@@ -44,16 +44,17 @@ Another critical insight was the integration of metrics such as Amazon return ra
 
 ### **Visualizations**
 
-#### **Sales Forecast Overview**
+#### **Sales Forecast Data Flow Overview**
 
-![Sales Forecast Overview](#)
+![Data Flow Overview](https://github.com/analytisor/Amazon-DTC-Sales-Optimization-and-Forecasting-Engine/blob/main/Data_flow_overview)
 
-#### **Unit Sales and Ad Spend Projections**
+#### **Key Formulas in Forecasting Engine**
 
-![Unit Sales and Ad Spend Projections](#)
+![Key FormulasUnit Sales and Ad Spend Projections](https://github.com/analytisor/Amazon-DTC-Sales-Optimization-and-Forecasting-Engine/blob/main/key%20formulas%20in%20forecasting%20engine)
 
-#### **Discounts by SKU and Campaign**
+#### **Metric Definitions and Formulas**
 
-![Discounts by SKU and Campaign](#)
+![Metrics 1](https://github.com/analytisor/Amazon-DTC-Sales-Optimization-and-Forecasting-Engine/blob/main/Modeling%20Engine%20Equation%201.jpg)
+![Metrics 2](https://github.com/analytisor/Amazon-DTC-Sales-Optimization-and-Forecasting-Engine/blob/main/Modeling%20Engine%20Equation%202.jpg)
 
 
