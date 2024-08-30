@@ -10,6 +10,8 @@ The company faced a critical challenge of aligning finance, operations, and mark
 
 To address this challenge, I developed the **Sales Forecast Modeling Engine** using Google Sheets, leveraging Amazon Attribution data to track the impact of paid advertising on sales. This tool introduced new metrics such as **Cost Per Visit** and **Share of Paid Visits**, enabling precise forecasting. The engine allowed for detailed input of advertising budgets and discount offers across different weeks, providing accurate projections of key metrics like Amazon conversion rate, total sales units, and customer acquisition costs.
 
+![Amazon Attribution](https://github.com/analytisor/Amazon-DTC-Sales-Optimization-and-Forecasting-Engine/blob/main/Paid%20Ads%20Flow%20and%20Attribution%20Pathway.jpg)
+
 ### **Impact**
 
 The implementation of this modeling engine enabled all departments to quickly align with the new targets. Finance was pleased as it allowed for accurate cash flow planning, marketing was able to adjust ad spend in line with the new sales targets, and operations successfully managed to sell through the remaining inventory without the need for additional orders. This comprehensive tool ensured that each department's objectives were met efficiently and effectively.
