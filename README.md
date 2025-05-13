@@ -1,3 +1,107 @@
+
+
+# NTB-Prediction-Model-for-Amazon-Subscribe-&-Save Orders
+
+## 🧠 Overview
+
+Amazon's default customer attribution model creates a critical blind spot in real-time reporting by assigning all unpaid "pending" orders—especially **Subscribe & Save (SNS)** orders—to a placeholder customer ID (`5b42a3b76af065a7ceedfe79deb09f8a`). This skews two vital metrics:
+
+- **Total Customer Count**: Multiple real customers appear as one
+- **NTB vs. Repeat Classification**: All orders are falsely flagged as "Repeat"
+
+These errors persist until the order invoices are paid, often up to 21 days later, disrupting week-to-date dashboards and impairing marketing and finance decisions.
+
+---
+
+## 🔍 Problem Breakdown
+
+- **Pending Order Behavior**: Amazon creates a placeholder order ~21 days before shipping for SNS, letting customers modify or cancel.
+- **Attribution Error**: All such orders are flagged as Repeat and assigned to one ID.
+- **Reporting Gap**: Key NTB performance metrics are invalid during the non-stabilized window (typically the most recent 20 days).
+
+---
+
+## ✅ Solution
+
+To address this, I built a forecasting-based model that estimates NTB performance in real time by:
+
+1. **Segmenting Order Types**: Treating subscription and non-subscription orders separately.
+2. **Historical NTB Ratio Modeling**: Using paid invoice data to establish baseline NTB-to-total order ratios.
+3. **Forecasted Adjustments**: Applying the modeled ratios to active pending orders in the unstable period.
+4. **Live Scorecard Integration**: Updating dashboards with corrected NTB estimates and customer counts.
+
+---
+
+## 🧮 NTB Estimation Formula
+
+To predict New-to-Brand (NTB) customers during the Amazon reporting lag, I implemented the following segmented estimation formula:
+
+\[
+\textbf{NTB}_{\text{estimated}} = \text{ntb\_orders} + (\text{placeholder\_non\_sns} \times \text{constant}_{\text{non\_sns}}) + (\text{placeholder\_sns} \times \text{constant}_{\text{sns}})
+\]
+
+**Where:**
+- `ntb_orders` = Finalized NTB orders with paid invoices
+- `placeholder_non_sns` = Unpaid non-subscription orders under placeholder ID
+- `placeholder_sns` = Unpaid subscription (SNS) orders under placeholder ID
+- `constant_non_sns` = Historical NTB ratio for non-subscription orders
+- `constant_sns` = Historical NTB ratio for SNS orders
+
+This logic allowed us to produce real-time NTB predictions aligned with post-invoice results, while separating order types by behavioral pattern.
+
+---
+## 📈 Impact
+
+- 🎯 **97%+ Accuracy** in NTB prediction for recent (unstable) 20-day window
+- 📊 Enabled **reliable WTD reporting**, eliminating delays from Amazon's post-invoice updates
+- 🔍 Exposed **20–25% NTB undercounting** in SKUs with high subscription volumes
+- 📉 Improved marketing attribution and CAC/ROAS tracking during live campaign reporting
+
+---
+
+## 🛠️ Tools Used
+
+- **SQL (snowflake)** – Extracted order and customer data
+- **Google Sheet** – Built historical ratio models and Initial prototyping and modeling logic
+- **Looker** – Integrated corrected metrics into live dashboards
+
+---
+
+## 📌 Key Metrics Corrected
+
+- **New-to-Brand (NTB) Customer Count**
+- **Total Unique Customer Count**
+- **NTB vs. Repeat Ratio**
+- **Week-to-Date Scorecard Accuracy**
+
+---
+
+## 🧩 Recommendation
+
+This model can be further enhanced by dynamically recalculating the NTB-to-order ratio based on rolling performance data. Instead of relying solely on static historical averages, a real-time adjustment mechanism can detect changes in customer acquisition behavior and subscription trends—making NTB prediction more adaptive and responsive to current performance shifts.
+ It also highlights the need for Amazon advertisers to build their own real-time attribution layers when native data is delayed or flawed.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Amazon-DTC-Sales-Optimization-and-Forecasting-Engine
 
 ## **SUMMARY**
