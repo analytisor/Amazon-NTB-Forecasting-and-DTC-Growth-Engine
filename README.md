@@ -1,3 +1,14 @@
+# 📦 Amazon DTC Analytics Projects
+
+A collection of advanced analytics solutions built to address real-world challenges in Amazon Direct-to-Consumer (DTC) ecommerce, including sales forecasting and customer attribution modeling.
+
+## ✅ Projects Included
+
+### 🔹 Project 1: [NTB-Prediction-Model-for-Amazon-Subscribe--Save-Orders](#)
+**Focus:** Correcting Amazon’s flawed NTB attribution during the “non-stabilized” reporting window caused by placeholder customer IDs in pending SNS orders.
+
+### 🔹 Project 2: [Amazon-DTC-Sales-Forecasting-Engine](#)
+**Focus:** Forecasting unit sales, revenue, and ad efficiency across Amazon and Shopify using attribution data and marketing variables.
 
 
 # NTB-Prediction-Model-for-Amazon-Subscribe-&-Save Orders
@@ -56,6 +67,14 @@ This logic allowed us to produce real-time NTB predictions aligned with post-inv
 - 📊 Enabled **reliable WTD reporting**, eliminating delays from Amazon's post-invoice updates
 - 🔍 Exposed **20–25% NTB undercounting** in SKUs with high subscription volumes
 - 📉 Improved marketing attribution and CAC/ROAS tracking during live campaign reporting
+
+---
+
+## 📊 Visual Example
+
+The chart below illustrates the difference between **stabilized NTB data** (post-invoice) and **non-stabilized NTB predictions** (real-time). The prediction model closes the gap between inaccurate placeholder-based reporting and actual customer attribution — allowing for reliable insights even during Amazon's reporting lag.
+
+![NTB Stabilized vs Non-Stabilized](ntb_stabilized.jpg)
 
 ---
 
